@@ -35,7 +35,7 @@ But if you placed a file named `blackout.css` into the `themes` directory, you c
 theme=blackout
 ```
 
-See the guide [How to Make a Theme](docs/How%20to%20Make%20a%20Theme.md) for creating one of those fancy things!
+See the guide [How to Make a Theme](wiki/How%20to%20Make%20a%20Theme.md) for creating one of those fancy things!
 
 ## Builds for Other Systems
 
