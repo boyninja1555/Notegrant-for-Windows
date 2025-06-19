@@ -1,0 +1,6 @@
+# Build trash
+dist
+target
+
+# Config parse trash
+dependency-reduced-pom.xml
