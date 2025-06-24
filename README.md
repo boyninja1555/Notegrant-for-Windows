@@ -45,7 +45,7 @@ See the guide [How to Make a Theme](https://github.com/boyninja1555/Notegrant-fo
 
 ## Builds for Other Systems
 
-If you have or know someone who has a version of this app ported over to a system besides _Windows_, please edit this file to list it here. Be sure to include your project's name (preferably \*Notegrant for **SysName\***) and a link to the project's public GitHub and the download(s) link(s).
+If you have or know someone who has a version of this app ported over to a system besides _Windows_, please edit this file to list it here. Be sure to include your project's name (preferably *Notegrant for **SysName***) and a link to the project's public GitHub and the download(s) link(s).
 
 > Builds that have added-on features or removed features that don't need to be removed will be deleted from this list!
 
