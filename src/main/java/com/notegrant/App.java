@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 
 import com.notegrant.control.TitleBar;
 import com.notegrant.util.ConfigManager;
@@ -24,6 +25,8 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         openNewWindow(primaryStage);
     }
+
+    private Scene mainScene;
 
     public void openNewWindow(Stage stage) throws IOException {
         // Title Bar
@@ -45,9 +48,10 @@ public class App extends Application {
 
         // Creates scene
         Scene scene = new Scene(root, 850, 480);
+        this.mainScene = scene;
 
         // CSS
-        loadTheme(scene);
+        loadTheme(getClass(), scene);
 
         // Window settings
         stage.setTitle("Notegrant");
@@ -56,11 +60,19 @@ public class App extends Application {
         stage.show();
     }
 
-    private void loadTheme(Scene scene) {
+    public Scene getMainScene() {
+        return mainScene;
+    }
+
+    public static void resetThemes(Scene scene) {
+        scene.getStylesheets().removeAll();
+    }
+
+    public static void loadTheme(Class<?> clazz, Scene scene) {
         String theme = ConfigManager.getConfig().getProperty("theme");
         Boolean themeLoaded = false;
 
-        URL internalThemeCss = getClass().getResource("/css/" + theme + ".css");
+        URL internalThemeCss = clazz.getResource("/css/" + theme + ".css");
 
         if (internalThemeCss != null) {
             scene.getStylesheets().add(internalThemeCss.toExternalForm());
@@ -91,9 +103,52 @@ public class App extends Application {
         if (!themeLoaded) {
             System.err.println("Could not load the " + theme + " theme! Using "
                     + ConfigManager.getConfigDefaults().getProperty("theme") + " by default...");
-            scene.getStylesheets().add(getClass()
-                    .getResource("/css/" + ConfigManager.getConfigDefaults().getProperty("theme") + ".css").toExternalForm());
+            scene.getStylesheets().add(clazz
+                    .getResource("/css/" + ConfigManager.getConfigDefaults().getProperty("theme") + ".css")
+                    .toExternalForm());
         }
+    }
+
+    public static ArrayList<String> getAvailableThemeNames(Class<?> clazz) {
+        ArrayList<String> themeNames = new ArrayList<>();
+
+        try {
+            URL cssFolder = clazz.getResource("/css");
+            if (cssFolder != null) {
+                File internalDir = new File(cssFolder.toURI());
+                File[] internalFiles = internalDir.listFiles((dir, name) -> name.endsWith(".css"));
+
+                if (internalFiles != null) {
+                    for (File file : internalFiles) {
+                        String fileName = file.getName();
+                        themeNames.add(fileName.substring(0, fileName.length() - 4));
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Error loading internal themes! " + e.getMessage());
+        }
+
+        Path configDirPath = ConfigManager.getConfigFile().toPath().getParent();
+        Path themesDirPath = configDirPath.resolve("themes");
+        File externalDir = new File(themesDirPath.toUri());
+
+        if (externalDir.exists() && externalDir.isDirectory()) {
+            File[] externalFiles = externalDir.listFiles((dir, name) -> name.endsWith(".css"));
+
+            if (externalFiles != null) {
+                for (File file : externalFiles) {
+                    String fileName = file.getName();
+                    String themeName = fileName.substring(0, fileName.length() - 4);
+
+                    if (!themeNames.contains(themeName)) {
+                        themeNames.add(themeName);
+                    }
+                }
+            }
+        }
+
+        return themeNames;
     }
 
     public static void main(String[] args) {

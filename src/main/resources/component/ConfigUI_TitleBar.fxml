@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.notegrant.control.TitleBar">
+    <HBox
+        fx:id="titleBar"
+        AnchorPane.leftAnchor="0"
+        AnchorPane.rightAnchor="0"
+        style="-fx-padding: 8; -fx-spacing: 10;"
+    >
+        <Label fx:id="titleBarTitle" text="Notegrant Configuration" style="-fx-font-size: 16px;" />
+        <Region fx:id="titleBarSpacer" HBox.hgrow="ALWAYS" />
+        <Button fx:id="minBtn" text="–" />
+        <Button fx:id="closeBtn" text="×" />
+    </HBox>
+</AnchorPane>

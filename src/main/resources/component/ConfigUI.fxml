@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="com.notegrant.control.ConfigUI">
+
+    <VBox fx:id="configContainer"
+        spacing="16"
+        AnchorPane.topAnchor="24"
+        AnchorPane.leftAnchor="24"
+        AnchorPane.rightAnchor="24"
+        AnchorPane.bottomAnchor="64"
+        style="-fx-background-color: transparent;" />
+
+    <Button text="Save and Close"
+        onAction="#handleSaveAndClose"
+        AnchorPane.bottomAnchor="16"
+        AnchorPane.leftAnchor="24"
+        AnchorPane.rightAnchor="24"
+        style="-fx-background-color: -fx-accent;" />
+
+</AnchorPane>
