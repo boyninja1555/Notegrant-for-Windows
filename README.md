@@ -27,6 +27,9 @@ Here, you can configure the theme. By default, these are available:
 light
 dark
 cool-purple
+ice-blue
+noir-red
+sunset-gold
 ```
 
 But if you placed a file named `blackout.css` into the `themes` directory, you can do this:
