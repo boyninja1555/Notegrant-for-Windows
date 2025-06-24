@@ -2,28 +2,28 @@
   -fx-base: #ffffff;
   -fx-background: #ffffff;
   -fx-control-inner-background: #ffffff;
-  -fx-text-fill: #000000;
+  -fx-text-fill: #1e1e1e;
   -fx-accent: #409eff;
   -fx-focus-color: #409eff;
-  -fx-faint-focus-color: #409eff44;
+  -fx-faint-focus-color: #409eff33;
 }
 
 .text-area {
   -fx-background-color: transparent;
-  -fx-text-fill: #000000;
+  -fx-text-fill: #1e1e1e;
   -fx-font-family: "Arial";
   -fx-font-size: 16px;
   -fx-padding: 8px;
 }
 
 .text-area .content {
-  -fx-background-color: #ffffff;
+  -fx-background-color: #fafafa;
   -fx-padding: 8px;
   -fx-line-spacing: 10px;
 }
 
 #titleBar {
-  -fx-background-color: #409eff22;
+  -fx-background-color: #409eff1a;
 }
 
 #titleBar .button {
@@ -32,11 +32,12 @@
   -fx-font-size: 16px;
   -fx-background-color: transparent;
   -fx-cursor: hand;
+  -fx-text-fill: #1e1e1e;
 }
 
 .scroll-bar:vertical,
 .scroll-bar:horizontal {
-  -fx-background-color: #e0e0e0;
+  -fx-background-color: #f0f0f0;
 }
 
 .thumb {

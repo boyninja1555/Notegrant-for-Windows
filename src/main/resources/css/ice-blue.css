@@ -1,29 +1,29 @@
 .root {
-  -fx-base: #121212;
-  -fx-background: #121212;
-  -fx-control-inner-background: #121212;
-  -fx-text-fill: #f0f0f0;
-  -fx-accent: #409eff;
-  -fx-focus-color: #409eff;
-  -fx-faint-focus-color: #409eff33;
+  -fx-base: #0b1f2e;
+  -fx-background: #0b1f2e;
+  -fx-control-inner-background: #0b1f2e;
+  -fx-text-fill: #e0faff;
+  -fx-accent: #33ddee;
+  -fx-focus-color: #33ddee;
+  -fx-faint-focus-color: #33ddeebb;
 }
 
 .text-area {
   -fx-background-color: transparent;
-  -fx-text-fill: #f0f0f0;
+  -fx-text-fill: #e0faff;
   -fx-font-family: "Arial";
   -fx-font-size: 16px;
   -fx-padding: 8px;
 }
 
 .text-area .content {
-  -fx-background-color: #1e1e1e;
+  -fx-background-color: #123547;
   -fx-padding: 8px;
   -fx-line-spacing: 10px;
 }
 
 #titleBar {
-  -fx-background-color: #409eff22;
+  -fx-background-color: #33ddee22;
 }
 
 #titleBar .button {
@@ -32,14 +32,13 @@
   -fx-font-size: 16px;
   -fx-background-color: transparent;
   -fx-cursor: hand;
-  -fx-text-fill: #f0f0f0;
 }
 
 .scroll-bar:vertical,
 .scroll-bar:horizontal {
-  -fx-background-color: #2a2a2a;
+  -fx-background-color: #1a3c4f;
 }
 
 .thumb {
-  -fx-background-color: #409eff;
+  -fx-background-color: #33ddee;
 }
