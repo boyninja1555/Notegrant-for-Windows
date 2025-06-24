@@ -17,7 +17,13 @@
 
 </div>
 
-Hi there! This is the official repository of _Notegrant for Windows_. Here you can find the _Maven+Java_ source code that makes up the highly-customizable editor. You will also find resources as seen in the app, such as the built-in themes (made in CSS) and interfaces (which are written in an XML-like format.) This repository also serves as the developer codebase of _Notegrant for Windows_, open-sourced so anyone (including you) can add on or fix features! Note that only the project owner can produce binaries known as _official_, but user-created builds are allowed under the terms that **a)** you advertise your build as _non-official_ and **b)** you leave credit towards the original project (besides edits made by you,) and **c)** the contents of the build are not dangerous to certain softwares and hardwares.
+Hi there! This is the official repository of _Notegrant for Windows_. Here you can find the _Maven+Java_ source code that makes up the highly-customizable editor. You will also find resources as seen in the app, such as the built-in themes and interfaces. This repository also serves as the developer codebase of _Notegrant for Windows_, open-sourced so anyone (including you) can add on or fix features! Note that only the project owner can produce binaries known as _official_, but user-created builds are allowed under the terms that **a)** you advertise your build as _non-official_ and **b)** you leave credit towards the original project (besides edits made by you,) and **c)** the contents of the build are not dangerous to certain softwares and hardwares.
+
+## Made With...
+
+- 🧱 Built with Java + JavaFX
+- 📄 UI Layouts written in FXML (XML-based declarative UI language)
+- 🎨 Themes styled with CSS
 
 ## Features
 
